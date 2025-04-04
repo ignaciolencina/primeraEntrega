@@ -1,0 +1,72 @@
+[
+  {
+    "id": "4f7fe1cf-b2fe-4a40-98f3-a8164269c517",
+    "title": "Teclado Redragon Azure",
+    "description": "Teclado color gris con luces",
+    "code": "TRa00",
+    "price": 90000,
+    "active": true,
+    "stock": 20,
+    "category": "Teclado",
+    "thumbnails": [
+      "/images/teclado-frontal.jpg",
+      "/images/teclado-lateral.jpg"
+    ]
+  },
+  {
+    "id": "8ffc54f5-4d4c-4af4-a8e6-c6b19ebe50ff",
+    "title": "Silla Gamer",
+    "description": "Silla gamer color negra",
+    "code": "SGn01",
+    "price": 180000,
+    "active": true,
+    "stock": 30,
+    "category": "Sillas",
+    "thumbnails": [
+      "/images/silla-frontal.jpg",
+      "/images/silla-lateral.jpg"
+    ]
+  },
+  {
+    "id": "3270cd8e-9297-41f8-a0f0-36036142ebd0",
+    "title": "Monitor Samsung",
+    "description": "Monitor color negro",
+    "code": "MSn01",
+    "price": 380000,
+    "active": true,
+    "stock": 30,
+    "category": "Monitores",
+    "thumbnails": [
+      "/images/monitor-frontal.jpg",
+      "/images/monitor-lateral.jpg"
+    ]
+  },
+  {
+    "id": "cb566c4f-9cd8-4524-865c-ad7f5bdb06d4",
+    "title": "Parlante JBL",
+    "description": "Parlante color negro",
+    "code": "PJn01",
+    "price": 150000,
+    "active": true,
+    "stock": 30,
+    "category": "Parlantes",
+    "thumbnails": [
+      "/images/parlante-frontal.jpg",
+      "/images/parlante-lateral.jpg"
+    ]
+  },
+  {
+    "id": "2a7e9f54-a228-4d36-96f2-4b24b92941e5",
+    "title": "Mouse Logitech M20",
+    "description": "Mouse color negro",
+    "code": "MLn01",
+    "price": 50000,
+    "active": true,
+    "stock": 30,
+    "category": "Mouses",
+    "thumbnails": [
+      "/images/mouse-frontal.jpg",
+      "/images/mouse-lateral.jpg"
+    ]
+  }
+]

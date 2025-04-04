@@ -1,0 +1,60 @@
+[
+  {
+    "c_id": "c3cb5c29-c223-4314-a6b5-b31e14fe6f10",
+    "products": [
+      {
+        "id": "4f7fe1cf-b2fe-4a40-98f3-a8164269c517",
+        "title": "Teclado Redragon Azure",
+        "price": 90000
+      },
+      {
+        "id": "8ffc54f5-4d4c-4af4-a8e6-c6b19ebe50ff",
+        "title": "Silla Gamer",
+        "price": 180000
+      },
+      {
+        "product": "4f7fe1cf-b2fe-4a40-98f3-a8164269c517",
+        "quantity": 3
+      },
+      {
+        "product": "8ffc54f5-4d4c-4af4-a8e6-c6b19ebe50ff",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "c_id": "2b5c942d-4b40-4021-bc29-8306edbca49a",
+    "products": [
+      {
+        "id": "4f7fe1cf-b2fe-4a40-98f3-a8164269c517",
+        "title": "Teclado Redragon Azure",
+        "price": 90000
+      },
+      {
+        "id": "3270cd8e-9297-41f8-a0f0-36036142ebd0",
+        "title": "Monitor Samsung",
+        "price": 380000
+      },
+      {
+        "id": "cb566c4f-9cd8-4524-865c-ad7f5bdb06d4",
+        "title": "Parlante JBL",
+        "price": 150000
+      }
+    ]
+  },
+  {
+    "c_id": "3f3b5227-c002-4b0d-ac3a-c43a46dfcc6d",
+    "products": [
+      {
+        "id": "2a7e9f54-a228-4d36-96f2-4b24b92941e5",
+        "title": "Mouse Logitech M20",
+        "price": 50000
+      },
+      {
+        "id": "3270cd8e-9297-41f8-a0f0-36036142ebd0",
+        "title": "Monitor Samsung",
+        "price": 380000
+      }
+    ]
+  }
+]
