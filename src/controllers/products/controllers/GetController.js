@@ -1,16 +1,10 @@
 import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const rootPath = path.join(__dirname, "../../../");
+import { productsPath } from "../../../utils.js";
 
 export class GetController {
   static async getProducts(_, res) {
     try {
-      const filePath = path.join(rootPath, "data/products.json");
-      const data = await fs.promises.readFile(filePath, "utf-8");
+      const data = await fs.promises.readFile(productsPath, "utf-8");
       const products = JSON.parse(data);
       res.json({
         data: products,
@@ -25,8 +19,7 @@ export class GetController {
 
   static async getProduct(req, res) {
     try {
-      const filePath = path.join(rootPath, "data/products.json");
-      const data = await fs.promises.readFile(filePath, "utf-8");
+      const data = await fs.promises.readFile(productsPath, "utf-8");
       const products = JSON.parse(data);
       const product = products.find((p) => p.id === req.params.id);
 

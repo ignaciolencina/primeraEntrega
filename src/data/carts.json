@@ -56,5 +56,39 @@
         "price": 380000
       }
     ]
+  },
+  {
+    "c_id": "89b613a0-cbf8-4ddf-81a3-03bf4e55d685",
+    "products": [
+      {
+        "id": "2a7e9f54-a228-4d36-96f2-4b24b92941e5",
+        "title": "Mouse Logitech M20",
+        "price": 50000
+      },
+      {
+        "id": "3270cd8e-9297-41f8-a0f0-36036142ebd0",
+        "title": "Monitor Samsung",
+        "price": 380000
+      }
+    ]
+  },
+  {
+    "c_id": "4d992b05-b809-4ef1-8918-abfd3ec18a79",
+    "products": [
+      {
+        "id": "2a7e9f54-a228-4d36-96f2-4b24b92941e5",
+        "title": "Mouse Logitech M20",
+        "price": 50000
+      },
+      {
+        "id": "3270cd8e-9297-41f8-a0f0-36036142ebd0",
+        "title": "Monitor Samsung",
+        "price": 380000
+      },
+      {
+        "product": "d564be4c-5973-4521-87ba-2910c2376855",
+        "quantity": 1
+      }
+    ]
   }
 ]

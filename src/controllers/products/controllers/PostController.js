@@ -1,12 +1,6 @@
 import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
 import crypto from "crypto";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const rootPath = path.join(__dirname, "../../../");
-const filePath = path.join(rootPath, "data/products.json");
+import { productsPath } from "../../../utils.js";
 
 export class PostController {
   static async postProduct(req, res) {
@@ -22,7 +16,7 @@ export class PostController {
     } = req.body;
 
     try {
-      const data = await fs.promises.readFile(filePath, "utf8");
+      const data = await fs.promises.readFile(productsPath, "utf8");
       const products = data ? JSON.parse(data) : [];
 
       if (products.some((product) => product.code === code)) {
@@ -44,7 +38,7 @@ export class PostController {
       };
 
       products.push(newProduct);
-      await fs.promises.writeFile(filePath, JSON.stringify(products, null, 2));
+      await fs.promises.writeFile(productsPath, JSON.stringify(products, null, 2));
 
       res.status(201).json({
         data: newProduct,

@@ -1,18 +1,12 @@
 import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const rootPath = path.join(__dirname, "../../../");
-const filePath = path.join(rootPath, "data/products.json");
+import { productsPath } from "../../../utils.js";
 
 export class DeleteController {
   static async deleteProduct(req, res) {
     const { id } = req.params;
 
     try {
-      const data = await fs.promises.readFile(filePath, "utf-8");
+      const data = await fs.promises.readFile(productsPath, "utf-8");
       const products = data ? JSON.parse(data) : [];
 
       const updatedProducts = products.filter((product) => product.id !== id);
@@ -24,7 +18,7 @@ export class DeleteController {
       }
 
       await fs.promises.writeFile(
-        filePath,
+        productsPath,
         JSON.stringify(updatedProducts, null, 2)
       );
 

@@ -1,19 +1,13 @@
 import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
 import crypto from "crypto";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const rootPath = path.join(__dirname, "../../../");
-const filePath = path.join(rootPath, "data/carts.json");
+import { cartsPath } from "../../../utils.js";
 
 export class PostController {
   static async postCart(req, res) {
     const { products } = req.body;
 
     try {
-      const data = await fs.promises.readFile(filePath, "utf8");
+      const data = await fs.promises.readFile(cartsPath, "utf8");
       const carts = data ? JSON.parse(data) : [];
 
       const newCart = {
@@ -22,7 +16,7 @@ export class PostController {
       };
 
       carts.push(newCart);
-      await fs.promises.writeFile(filePath, JSON.stringify(carts, null, 2));
+      await fs.promises.writeFile(cartsPath, JSON.stringify(carts, null, 2));
 
       res.status(201).json({
         data: newCart,
@@ -39,7 +33,7 @@ export class PostController {
     const { c_id, id } = req.params;
 
     try {
-        const data = await fs.promises.readFile(filePath, 'utf-8');
+        const data = await fs.promises.readFile(cartsPath, 'utf-8');
         const carts = data ? JSON.parse(data) : [];
   
         const cartIndex = carts.findIndex((c) => c.c_id === c_id);
@@ -58,7 +52,7 @@ export class PostController {
   
         carts[cartIndex] = cart;
   
-        await fs.promises.writeFile(filePath, JSON.stringify(carts, null, 2));
+        await fs.promises.writeFile(cartsPath, JSON.stringify(carts, null, 2));
   
         res.status(200).json({
           data: cart,

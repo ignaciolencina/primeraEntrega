@@ -1,11 +1,5 @@
 import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const rootPath = path.join(__dirname, "../../../");
-const filePath = path.join(rootPath, "data/products.json");
+import { productsPath } from "../../../utils.js";
 
 export class PutController {
   static async putProduct(req, res) {
@@ -15,7 +9,7 @@ export class PutController {
     } = req;
 
     try {
-      const data = await fs.promises.readFile(filePath, "utf-8");
+      const data = await fs.promises.readFile(productsPath, "utf-8");
       const products = data ? JSON.parse(data) : [];
       const index = products.findIndex((product) => product.id === id);
 
@@ -27,7 +21,7 @@ export class PutController {
 
       products[index] = { ...products[index], ...body, id };
 
-      await fs.promises.writeFile(filePath, JSON.stringify(products, null, 2));
+      await fs.promises.writeFile(productsPath, JSON.stringify(products, null, 2));
 
       res.status(201).json({
         data: products[index],

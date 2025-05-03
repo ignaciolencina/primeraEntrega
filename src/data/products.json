@@ -68,5 +68,19 @@
       "/images/mouse-frontal.jpg",
       "/images/mouse-lateral.jpg"
     ]
+  },
+  {
+    "id": "d564be4c-5973-4521-87ba-2910c2376855",
+    "title": "Mesa de altura ajustable",
+    "description": "Mesa de madera y fibra de altura ajustable",
+    "code": "MAj01",
+    "price": 150000,
+    "active": true,
+    "stock": 10,
+    "category": "Mesas",
+    "thumbnails": [
+      "/images/mesaAjustable-frontal.jpg",
+      "/images/mesaAjustable-lateral.jpg"
+    ]
   }
 ]
