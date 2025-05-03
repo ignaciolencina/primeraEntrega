@@ -1,5 +1,7 @@
 import express from 'express';
 import { mainRouter } from './routes/mainRouter.js';
+import { __dirname } from './utils.js';
+import { engine } from 'express-handlebars';
 
 console.clear();
 console.log('⌛ Inicializando servidor...');
@@ -8,6 +10,11 @@ console.log('⌛ Inicializando servidor...');
 const app = express();
 
 const PORT = process.env.PORT || 3000;
+
+// Cofiguracion de Handlebars
+app.engine('handlebars', engine());
+app.set('view engine', 'handlebars');
+app.set('views',`${__dirname}/views`);
 
 app.use(express.json());
 
