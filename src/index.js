@@ -13,8 +13,9 @@ const PORT = process.env.PORT || 3000;
 
 // Cofiguracion de Handlebars
 app.engine('handlebars', engine());
-app.set('view engine', 'handlebars');
 app.set('views',`${__dirname}/views`);
+app.set('view engine', 'handlebars');
+app.use(express.static(`${__dirname}/public`))
 
 app.use(express.json());
 
