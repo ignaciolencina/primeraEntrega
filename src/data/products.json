@@ -68,5 +68,27 @@
       "/images/mouse-frontal.jpg",
       "/images/mouse-lateral.jpg"
     ]
+  },
+  {
+    "id": "f03c12c0-b70e-4a13-b51a-0eebead732cd",
+    "title": "Borrar",
+    "description": "Borrar",
+    "code": "Borrar01",
+    "price": "3500",
+    "active": true,
+    "stock": "1",
+    "category": "Borrar",
+    "thumbnails": "borrar"
+  },
+  {
+    "id": "eb392d66-339f-49be-90db-bda709b2c296",
+    "title": "Borrar2",
+    "description": "Borrar2",
+    "code": "Borrar02",
+    "price": "2000",
+    "active": true,
+    "stock": "1",
+    "category": "Borrar",
+    "thumbnails": "borrar"
   }
 ]
