@@ -9,7 +9,6 @@ export class PostController {
       description,
       code,
       price,
-      active,
       stock,
       category,
       thumbnails,
@@ -31,7 +30,7 @@ export class PostController {
         description,
         code,
         price,
-        active,
+        active: true,
         stock,
         category,
         thumbnails,
@@ -39,6 +38,9 @@ export class PostController {
 
       products.push(newProduct);
       await fs.promises.writeFile(productsPath, JSON.stringify(products, null, 2));
+
+      //Aqui emito el evento
+      req.io.emit("productsUpdated", products);
 
       res.status(201).json({
         data: newProduct,

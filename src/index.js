@@ -24,6 +24,10 @@ app.set("view engine", "handlebars");
 //Middlewares
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
+app.use((req, _, next) => {
+  req.io = io;
+  next();
+});
 
 // Para peticiones con JSON
 app.use(express.json());
@@ -35,20 +39,34 @@ app.use("/api/v1", mainRouter);
 io.on("connection", (socket) => {
   console.log("Cliente conectado");
 
-  socket.on("addProduct", (product) => {
-    const data = fs.readFile(productsPath, "utf-8");
-    const products = JSON.parse(data);
-    products.push(product);
-    fs.promises.writeFile(productsPath, JSON.stringify(products, null, 2));
-    io.emit("productsUpdated", products);
+  socket.on("addProduct", async (product) => {
+    try {
+      const data = await fs.promises.readFile(productsPath, "utf-8");
+      const products = JSON.parse(data);
+      products.push(product);
+      await fs.promises.writeFile(
+        productsPath,
+        JSON.stringify(products, null, 2)
+      );
+      io.emit("productsUpdated", products);
+    } catch (error) {
+      console.error("Error al agregar producto desde socket:", error);
+    }
   });
 
-  socket.on("deleteProduct", (id) => {
-    let data = fs.readFile(productsPath, "utf-8");
-    let products = JSON.parse(data);
-    products = products.filter((p) => p.id !== id);
-    fs.promises.writeFile(productsPath, JSON.stringify(products, null, 2));
-    io.emit("productsUpdated", products)
+  socket.on("deleteProduct", async (id) => {
+    try {
+      const data = await fs.promises.readFile(productsPath, "utf-8");
+      let products = JSON.parse(data);
+      products = products.filter((p) => p.id !== id);
+      await fs.promises.writeFile(
+        productsPath,
+        JSON.stringify(products, null, 2)
+      );
+      io.emit("productsUpdated", products);
+    } catch (error) {
+      console.error("Error al eliminar producto desde socket:", error);
+    }
   });
 });
 
