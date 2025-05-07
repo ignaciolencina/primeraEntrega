@@ -4,7 +4,7 @@
 > [!NOTE]
 > Se agregan los endpoints para las vistas y el uso de WebSocket a continuación.
 
-## VIEWS
+## VIEWS - ENTREGA NUMERO 2
 
 ### 🔹 Get all products & Form
 
