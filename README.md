@@ -1,6 +1,20 @@
 > [!NOTE]
 > Debe usarse el comando de `npm run dev` para levantar el puerto, no se utilizó nodemon.
 
+> [!NOTE]
+> Se agregan los endpoints para las vistas y el uso de WebSocket a continuación.
+
+## VIEWS
+
+### 🔹 Get all products & Form
+
+**GET Auto actualizable con WebSockets**  
+`http://localhost:8080/api/v1/views/realTimeProducts`
+
+**GET No auto actualizable**  
+`http://localhost:8080/api/v1/views`
+
+---
 
 # API Endpoints - Productos y Carritos
 Dejo estos endpoints a modo de ejemplo para poder hacer pruebas en postman.

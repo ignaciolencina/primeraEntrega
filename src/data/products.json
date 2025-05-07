@@ -42,53 +42,47 @@
     ]
   },
   {
-    "id": "cb566c4f-9cd8-4524-865c-ad7f5bdb06d4",
+    "id": "250a8372-165f-43ef-80ee-eb1dcb4a070c",
     "title": "Parlante JBL",
     "description": "Parlante color negro",
-    "code": "PJn01",
-    "price": 150000,
+    "code": "Pjbl01",
+    "price": "180000",
     "active": true,
-    "stock": 30,
+    "stock": "10",
     "category": "Parlantes",
-    "thumbnails": [
-      "/images/parlante-frontal.jpg",
-      "/images/parlante-lateral.jpg"
-    ]
+    "thumbnails": "imagenparlante.jpg"
   },
   {
-    "id": "2a7e9f54-a228-4d36-96f2-4b24b92941e5",
-    "title": "Mouse Logitech M20",
-    "description": "Mouse color negro",
-    "code": "MLn01",
-    "price": 50000,
+    "id": "d4475ed0-7dfc-4bdb-b182-9cdc7af9a2e3",
+    "title": "Camara Sony",
+    "description": "Camara ultra HD",
+    "code": "Csy01",
+    "price": "450000",
     "active": true,
-    "stock": 30,
+    "stock": "1",
+    "category": "Camaras",
+    "thumbnails": "imagencamara.jpg"
+  },
+  {
+    "id": "46f17d33-2b64-4e56-961a-4e1be3522a7d",
+    "title": "Mouse Logitech",
+    "description": "Mouse inalambrico color negro",
+    "code": "Min01",
+    "price": "80000",
+    "active": true,
+    "stock": "25",
     "category": "Mouses",
-    "thumbnails": [
-      "/images/mouse-frontal.jpg",
-      "/images/mouse-lateral.jpg"
-    ]
+    "thumbnails": "imagenmouse.jpg"
   },
   {
-    "id": "f03c12c0-b70e-4a13-b51a-0eebead732cd",
-    "title": "Borrar",
-    "description": "Borrar",
-    "code": "Borrar01",
-    "price": "3500",
+    "id": "d69b1c3f-2565-4b0e-9414-ff9e433d9e6f",
+    "title": "Laptop Dell",
+    "description": "Laptop color gris",
+    "code": "Ldell01",
+    "price": "1500000",
     "active": true,
-    "stock": "1",
-    "category": "Borrar",
-    "thumbnails": "borrar"
-  },
-  {
-    "id": "eb392d66-339f-49be-90db-bda709b2c296",
-    "title": "Borrar2",
-    "description": "Borrar2",
-    "code": "Borrar02",
-    "price": "2000",
-    "active": true,
-    "stock": "1",
-    "category": "Borrar",
-    "thumbnails": "borrar"
+    "stock": "4",
+    "category": "Laptops",
+    "thumbnails": "imagenlaptop.jpg"
   }
 ]

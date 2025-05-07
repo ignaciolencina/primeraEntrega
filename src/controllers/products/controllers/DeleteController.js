@@ -23,7 +23,7 @@ export class DeleteController {
       );
 
       //Aqui emito el evento
-      req.io.emit("productsUpdated", products);
+      req.io.emit("productsUpdated", updatedProducts);
 
       res.status(201).json({
         message: "Producto eliminado correctamente",
